@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="tf03_ros" type="tf03_ros_node" name="tf03_ros_node">
+    <param name="serial_port" type="string" value="/dev/ttyAMA2" />
+    <param name="baud_rate" type="int" value="115200" />
+  </node>
+  
+  <node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini" args="0 0 0 0 0 0 base_link TF03 100" />
+</launch>
